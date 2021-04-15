@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavBar from './Components/Shared/Navbar/NavBar';
+import Home from './Components/Home/Home/Home';
+import Footer from './Components/Shared/Footer/Footer';
+import { createContext, useState } from 'react';
+import Login from './Components/Login/Login/Login';
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+
+export const UserContext = createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   const [loggedInUser, setLoggedInUser] = useState();
+   return (
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+         <Router>
+            <NavBar />
+            <Switch>
+               <Route exact path="/">
+                  <Home />
+               </Route>
+               <Route path="/home">
+                  <Home />
+               </Route>
+               <Route path="/dashboard">
+                  <Dashboard />
+               </Route>
+               <Route path="/login">
+                  <Login />
+               </Route>
+            </Switch>
+            <Footer />
+         </Router>
+      </UserContext.Provider>
+   );
 }
 
 export default App;
