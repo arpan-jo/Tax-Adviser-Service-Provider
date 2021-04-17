@@ -1,3 +1,11 @@
-.home-card :hover {
-   border: 10px solid red;
+/* .home-card {
+   background: #52c0f5;
+   border-radius: 5px;
+   box-shadow: 0px 10px 30px -5px rgba(14, 13, 13, 0.3);
+   transition: box-shadow 0.2s;
+   will-change: transform;
 }
+
+.home-card:hover {
+   box-shadow: 0px 300px 100px 10px rgba(187, 11, 11, 0.4);
+} */

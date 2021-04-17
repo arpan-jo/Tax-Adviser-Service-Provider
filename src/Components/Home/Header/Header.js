@@ -5,7 +5,6 @@ import headerBg from '../../Images/headerBg.jpg';
 const Header = () => {
    return (
       <div>
-         <h1>This is header</h1>
          <Carousel>
             <Carousel.Item className="header-container">
                <img
@@ -13,15 +12,7 @@ const Header = () => {
                   src={headerBg}
                   alt="First slide"
                />
-
-               {/* <h3>
-                  Chossing a <br /> Financial Advisor
-               </h3> */}
-
                <Carousel.Caption>
-                  <h3>
-                     Chossing a <br /> Financial Advisor
-                  </h3>
                   <p>
                      Nulla vitae elit libero, a pharetra augue mollis interdum.
                   </p>
@@ -33,9 +24,9 @@ const Header = () => {
                   src={headerBg}
                   alt="Second slide"
                />
-               <h3>
+               {/* <h3>
                   Chossing a <br /> Financial Advisor
-               </h3>
+               </h3> */}
                <Carousel.Caption>
                   <h3>Second slide label</h3>
                   <p>
@@ -49,9 +40,9 @@ const Header = () => {
                   src={headerBg}
                   alt="Third slide"
                />
-               <h3>
+               {/* <h3>
                   Chossing a <br /> Financial Advisor
-               </h3>
+               </h3> */}
                <Carousel.Caption>
                   <h3>Third slide label</h3>
                   <p>

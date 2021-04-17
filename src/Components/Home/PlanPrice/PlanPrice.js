@@ -3,9 +3,17 @@ import PriceCard from '../PriceCard/PriceCard';
 
 const PlanPrice = () => {
    const pricePlan = [
-      { planName: 'Basic Plan', price: 120 },
-      { planName: 'Advance Plan', price: 120 },
-      { planName: 'Profesional Plan', price: 120 },
+      { planName: 'Basic Plan', price: 120, package: 'FOR PERSONAL USE OLNY' },
+      {
+         planName: 'Advance Plan',
+         price: 120,
+         package: 'FOR SMALL AND LARGE COMPANIES',
+      },
+      {
+         planName: 'Profesional Plan',
+         price: 120,
+         package: 'FOR USE CORPORATIONS',
+      },
    ];
    return (
       <div>

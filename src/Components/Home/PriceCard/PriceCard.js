@@ -1,17 +1,21 @@
 import React from 'react';
+import './PriceCard.css';
 
 const PriceCard = ({ price }) => {
    return (
       <div className="col-md-4 my-1 info-card">
-         <div className="d-flex info-container bg-danger align-items-center justify-content-center ">
-            <div className=""></div>
-            <div>
-               <h5>{price.planName}</h5>
-               <small>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, laboriosam.
+         <div className="info-container rounded">
+            <div className="mt-2">
+               <h5 className="pt-2">{price.planName}</h5>
+               <p>
+                  <span className="text-bold"> $ {price.price}</span> <br />{' '}
+                  <small>per month</small>
+               </p>
+            </div>
+            <div className="mt-5">
+               <small className="bg-dark d-block text-white rounded py-2">
+                  {price.package}
                </small>
-               <p className="bg-dark d-block text-white">{price.price}</p>
             </div>
          </div>
       </div>

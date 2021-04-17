@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import firebase from 'firebase/app';
 import firebaseConfig from '../../firebaseConfig';
 import 'firebase/auth';
@@ -26,6 +26,7 @@ const Login = () => {
          .then(result => {
             const user = result.user;
             setLoggedInUser(user);
+            // sessionStorage.setItem('user', user.email);
             history.replace(from);
          })
          .catch(error => {
