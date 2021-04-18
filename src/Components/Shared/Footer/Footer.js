@@ -7,6 +7,7 @@ import {
    faTwitter,
    faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import { Button } from 'react-bootstrap';
 
 const Footer = () => {
    return (
@@ -84,13 +85,18 @@ const Footer = () => {
                            id="email"
                            name="email"
                            placeholder="Name"
-                        />
+                        />{' '}
+                        <br />
                         <input
                            type="email"
                            id="email"
                            name="email"
                            placeholder="Email"
                         />
+                        <br />
+                        <Button variant="success" disabled="disabled">
+                           Send Mail
+                        </Button>
                      </div>
                   </div>
                </div>

@@ -11,7 +11,6 @@ const LoadServices = ({ service }) => {
          },
          body: JSON.stringify({ id }),
       });
-      window.location.reload();
    };
 
    return (

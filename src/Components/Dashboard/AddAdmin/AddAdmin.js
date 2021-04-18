@@ -38,7 +38,6 @@ const AddAdmin = () => {
                         </td>
                         <td>
                            <input
-                              className="px-5"
                               type="text"
                               name="name"
                               {...register('name')}
@@ -51,7 +50,6 @@ const AddAdmin = () => {
                         </td>
                         <td>
                            <input
-                              className="px-5"
                               type="email"
                               name="email"
                               {...register('email', { required: true })}
@@ -62,7 +60,6 @@ const AddAdmin = () => {
                      <tr>
                         <td>
                            <button
-                              //   onClick={refreshPage}
                               className="btn btn-success mt-2"
                               type="submit"
                            >

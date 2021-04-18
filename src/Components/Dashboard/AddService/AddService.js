@@ -17,7 +17,7 @@ const AddService = () => {
          },
          body: JSON.stringify(data),
       });
-      window.location.reload();
+      // window.location.reload();
    };
 
    return (
@@ -51,22 +51,17 @@ const AddService = () => {
                         rows="4"
                      ></textarea>{' '}
                      {errors.review && <span>This field is required</span>}
+                     <label className="form-label">Price:</label>
+                     {errors.price && <span>This field is required</span>}
+                     <input
+                        {...register('price', { required: true })}
+                        className="form-control"
+                     />
                      <br />
-                     <input type="submit" />
+                     <button className="btn btn-success" type="submit">
+                        Add Service
+                     </button>
                   </form>
-                  {/* <h3>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Eius, quae!
-                  </h3>
-                  <h3>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Molestias accusantium, debitis enim laudantium quia beatae,
-                     id reiciendis nulla eius porro minus. Asperiores enim iure
-                     corporis atque consequuntur error eligendi, dolor nesciunt,
-                     ipsum architecto ex quam aperiam alias quisquam maxime rem?
-                     Cupiditate enim commodi eligendi. Reprehenderit sint
-                     possimus facere id quas?
-                  </h3> */}
                </div>
             </div>
          </div>

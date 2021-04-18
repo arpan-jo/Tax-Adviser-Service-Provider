@@ -1,8 +1,12 @@
-import React from 'react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
+import { UserContext } from '../../../App';
 
 const NavBar = () => {
+   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
    return (
       <section>
          <div className="">
@@ -11,6 +15,11 @@ const NavBar = () => {
                   <h3 style={{ 'font-family': 'Dancing Script' }}>
                      <span className="fs-1 px-3">TAX</span>
                      <span className="text-warning fw-bold">ADVISER</span>
+                     {'    '}
+                     <FontAwesomeIcon
+                        className="text-warning fw-bold"
+                        icon={faPiggyBank}
+                     />
                   </h3>
                </Navbar.Brand>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,9 +34,17 @@ const NavBar = () => {
                      <Nav.Link as={Link} to="/addReview">
                         <span className="text-white"> Reviews</span>
                      </Nav.Link>
-                     <Nav.Link as={Link} to="/login">
-                        <span className="text-white"> Login</span>
-                     </Nav.Link>
+                     {loggedInUser ? (
+                        <Nav.Link as={Link} to="/login">
+                           <span className="text-white">
+                              {loggedInUser.displayName}
+                           </span>
+                        </Nav.Link>
+                     ) : (
+                        <Nav.Link as={Link} to="/login">
+                           <span className="text-white"> Login</span>
+                        </Nav.Link>
+                     )}
                   </Nav>
                </Navbar.Collapse>
             </Navbar>

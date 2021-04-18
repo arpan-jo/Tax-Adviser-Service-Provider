@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import 'react-calendar/dist/Calendar.css';
 import { useLocation } from 'react-router';
 import { UserContext } from '../../../App';
@@ -8,9 +8,6 @@ import ProcessPayment from '../../ProcessPayment/ProcessPayment';
 const Dashboard = () => {
    const location = useLocation();
    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
-   const [selectedDate, setselectedDate] = useState(new Date());
-
    const service = location.state.params;
 
    return (

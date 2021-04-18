@@ -29,7 +29,6 @@ const MyOrder = () => {
             <div className="col-md-3">
                <Sidebar></Sidebar>
             </div>
-
             <div className="col-md-9">
                <h3 className="mt-3 fw-bold">Order's History</h3>
                <Table bordered>

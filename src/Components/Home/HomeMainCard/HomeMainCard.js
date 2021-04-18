@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 import './HomeMainCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 const HomeMainCard = ({ service }) => {
    const history = useHistory();
@@ -17,7 +19,9 @@ const HomeMainCard = ({ service }) => {
                <Card.Text>
                   <small>{service.summary}</small>
                </Card.Text>
-
+               <Card.Text>
+                  <small>$ {service.price}</small>
+               </Card.Text>
                <Button
                   className="btn btn-warning px-4 button-hover"
                   onClick={() => {
@@ -25,7 +29,7 @@ const HomeMainCard = ({ service }) => {
                   }}
                   variant="success"
                >
-                  Order
+                  Order <FontAwesomeIcon icon={faSignInAlt} />
                </Button>
             </Card.Body>
          </Card>
