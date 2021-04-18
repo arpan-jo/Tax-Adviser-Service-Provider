@@ -13,29 +13,6 @@ const Dashboard = () => {
 
    const service = location.state.params;
 
-   // const handleDateChange = date => {
-   //    setselectedDate(date);
-   //    fetch('http://localhost:5005/appointmentsByDate', {
-   //       method: 'POST',
-   //       headers: {
-   //          'Content-Type': 'application/json',
-   //       },
-   //       body: JSON.stringify({ date }),
-   //    })
-   //       .then(res => res.json())
-   //       .then(data => setAppointments(data));
-   // };
-
-   // useEffect(() => {
-   //    fetch('http://localhost:5005', {
-   //       method: 'POST',
-   //       headers: { 'Content-Type': 'application/json' },
-   //       body: JSON.stringify({ selectedDate }),
-   //    })
-   //       .then(res => res.json())
-   //       .then(data => setAppointments(data));
-   // }, [selectedDate]);
-
    return (
       <section className="justify-content-center">
          <div className="container-fluid row ">
@@ -43,7 +20,20 @@ const Dashboard = () => {
                <Sidebar></Sidebar>
             </div>
             <div className="col-md-6 ">
-               <h3>Title : {service.title}</h3>
+               <h5 className="mt-2 fw-bold">ORDER FORM:</h5>
+               <input
+                  className="p-1 m-1 w-50"
+                  type="text"
+                  disabled
+                  value={`Email: ${loggedInUser.email}`}
+               />
+               <br />
+               <input
+                  className="p-1 m-1 w-50"
+                  type="text"
+                  disabled
+                  value={`Order Title: ${service.title}`}
+               />
                <ProcessPayment service={service}></ProcessPayment>
             </div>
          </div>

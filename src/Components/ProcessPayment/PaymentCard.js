@@ -67,6 +67,7 @@ const PaymentCard = ({ service }) => {
 
    return (
       <form onSubmit={handleSubmit}>
+         <p>Pay With Card:</p>
          <label>
             Card number
             <CardNumberElement
@@ -125,11 +126,11 @@ const PaymentCard = ({ service }) => {
          </label>
          <br />
          <button
-            className="btn btn-success px-5"
+            className="btn btn-success px-4 mt-1"
             type="submit"
             disabled={!stripe}
          >
-            Pay
+            Confirm with Pay
          </button>
       </form>
    );

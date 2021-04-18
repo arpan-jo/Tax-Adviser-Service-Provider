@@ -11,17 +11,15 @@ const HomeMainCard = ({ service }) => {
 
    return (
       <>
-         <Card
-            className="m-3 border-0 shadow rounded"
-            style={{ width: '15rem', height: '15rem' }}
-         >
+         <Card className="m-3 border-0 shadow rounded col-md-4">
             <Card.Body>
                <Card.Title>{service.title}</Card.Title>
                <Card.Text>
                   <small>{service.summary}</small>
                </Card.Text>
+
                <Button
-                  className="btn btn-success px-4"
+                  className="btn btn-warning px-4 button-hover"
                   onClick={() => {
                      handleOrder(service);
                   }}

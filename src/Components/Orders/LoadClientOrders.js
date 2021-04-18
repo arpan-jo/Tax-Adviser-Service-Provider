@@ -2,17 +2,14 @@ import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 
 const LoadClientOrders = ({ order }) => {
-   const status1 = order?.status === 'pending';
-   // const status2 = order?.status === 'on going';
-   // const status3 = order?.status === 'done';
    const handleStatus = (id, e) => {
       const newStatus = e.target.innerText;
-
       fetch('https://secret-shelf-74335.herokuapp.com/updateOrder', {
          method: 'PATCH',
          headers: { 'Content-type': 'application/json' },
          body: JSON.stringify({ id, newStatus }),
       });
+      // window.location.reload();
    };
 
    return (
@@ -22,39 +19,32 @@ const LoadClientOrders = ({ order }) => {
             <td>{order.title}</td>
             <td>{order.paymentMethod.id}</td>
             <td>
-               {status1 === true ? (
-                  <button className="btn btn-danger" disabled="disabled">
-                     {order.status}
-                  </button>
-               ) : (
-                  <button className="btn btn-success" disabled="disabled">
-                     {order.status}
-                  </button>
-               )}
+               <button className={order.status} disabled="disabled">
+                  {order.status}
+               </button>
             </td>
             <td>
                <Dropdown>
                   <Dropdown.Toggle id="dropdown-basic">Status</Dropdown.Toggle>
-
                   <Dropdown.Menu>
                      <Dropdown.Item
                         className="text-danger"
                         onClick={e => handleStatus(order._id, e)}
-                        href="#/action-1"
+                        to="/order"
                      >
                         Pending
                      </Dropdown.Item>
                      <Dropdown.Item
                         className="text-warning"
                         onClick={e => handleStatus(order._id, e)}
-                        href="#/action-2"
+                        to="/order"
                      >
-                        On Going
+                        On-Going
                      </Dropdown.Item>
                      <Dropdown.Item
                         className="text-success"
                         onClick={e => handleStatus(order._id, e)}
-                        href="#/action-3"
+                        to="/order"
                      >
                         Done
                      </Dropdown.Item>

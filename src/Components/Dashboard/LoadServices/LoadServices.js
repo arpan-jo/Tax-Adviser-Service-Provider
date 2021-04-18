@@ -3,25 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 const LoadServices = ({ service }) => {
-   //    const [email, setEmail] = useState();
+   const deleteAdmin = id => {
+      fetch('https://secret-shelf-74335.herokuapp.com/deleteService', {
+         method: 'DELETE',
+         headers: {
+            'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({ id }),
+      });
+      window.location.reload();
+   };
 
-   //    const history = useHistory();
-   //    const deleteAdmin = anAdmin => {
-   //       const { email } = anAdmin;
-   //       setEmail(email);
-   //       window.location.reload();
-   //    };
-
-   //    useEffect(() => {
-   //         fetch('https://secret-shelf-74335.herokuapp.com/deleteService', {
-   //            method: 'DELETE',
-   //            headers: {
-   //               'Content-Type': 'application/json',
-   //            },
-   //            body: JSON.stringify({ email }),
-   //         });
-   //    }, [email]);
-   //    history.push('/adminPanel');
    return (
       <>
          <tr>
@@ -33,7 +25,7 @@ const LoadServices = ({ service }) => {
                   <FontAwesomeIcon icon={faEdit} />
                </button>
                <button
-                  //   onClick={() => deleteAdmin(admin)}
+                  onClick={() => deleteAdmin(service._id)}
                   className="btn bg-danger"
                >
                   <FontAwesomeIcon icon={faTrash} />

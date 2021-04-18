@@ -10,7 +10,7 @@ import Services from './Components/Dashboard/Services/Services';
 import AddService from './Components/Dashboard/AddService/AddService';
 import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 import AllAdmins from './Components/Dashboard/AllAdmins/AllAdmins';
-import AddReview from './Components/AddReview/AddReview/AddReview';
+import AddReview from './Components/Home/Review/AddReview';
 import Orders from './Components/Orders/Orders';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import MyOrder from './Components/Orders/MyOrder';

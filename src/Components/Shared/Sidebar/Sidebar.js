@@ -2,6 +2,17 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import './Sidebar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+   faAddressCard,
+   faCalendarCheck,
+   faColumns,
+   faPenNib,
+   faPlus,
+   faSignOutAlt,
+   faUser,
+   faUsers,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -33,13 +44,14 @@ const Sidebar = () => {
                      to="/common"
                      className="text-white text-decoration-none"
                   >
+                     <FontAwesomeIcon icon={faColumns} />
                      Dashboard
                   </Link>
                </li>
 
                <li>
                   <Link to="/order" className="text-white text-decoration-none">
-                     Client Orders
+                     <FontAwesomeIcon icon={faAddressCard} /> Client Orders
                   </Link>
                </li>
                <li>
@@ -47,7 +59,7 @@ const Sidebar = () => {
                      to="/services"
                      className="text-white text-decoration-none"
                   >
-                     Services
+                     <FontAwesomeIcon icon={faCalendarCheck} /> Services
                   </Link>
                </li>
 
@@ -56,7 +68,7 @@ const Sidebar = () => {
                      to="/addService"
                      className="text-white text-decoration-none"
                   >
-                     Add Service
+                     <FontAwesomeIcon icon={faPlus} /> Add Service
                   </Link>
                </li>
 
@@ -65,7 +77,7 @@ const Sidebar = () => {
                      to="/adminPanel"
                      className="text-white text-decoration-none"
                   >
-                     Admin Panel
+                     <FontAwesomeIcon icon={faUsers} /> Admin Panel
                   </Link>
                </li>
                <li>
@@ -73,7 +85,7 @@ const Sidebar = () => {
                      to="/addAnAdmin"
                      className="text-white text-decoration-none"
                   >
-                     Add An Admin
+                     <FontAwesomeIcon icon={faUser} /> Add An Admin
                   </Link>
                </li>
             </ul>
@@ -84,6 +96,7 @@ const Sidebar = () => {
                      to="/common"
                      className="text-white text-decoration-none"
                   >
+                     <FontAwesomeIcon icon={faColumns} />
                      Dashboard
                   </Link>
                </li>
@@ -92,7 +105,7 @@ const Sidebar = () => {
                      to="/myOrder"
                      className="text-white text-decoration-none"
                   >
-                     My Order
+                     <FontAwesomeIcon icon={faAddressCard} /> My Order
                   </Link>
                </li>
                <li>
@@ -100,14 +113,16 @@ const Sidebar = () => {
                      to="/addReview"
                      className="text-white text-decoration-none"
                   >
-                     Review
+                     <FontAwesomeIcon icon={faPenNib} /> Review
                   </Link>
                </li>
             </ul>
          )}
          <div>
             <Link to="/" className="text-white text-decoration-none">
-               <span>Logout</span>
+               <span>
+                  <FontAwesomeIcon icon={faSignOutAlt} /> Logout
+               </span>
             </Link>
          </div>
       </div>

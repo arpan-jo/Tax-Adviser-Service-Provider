@@ -12,13 +12,6 @@ const AddAdmin = () => {
    } = useForm();
 
    const onSubmit = data => {
-      //   const productData = {
-      //      name: data.name,
-      //      price: data.price,
-      //      weight: data.weight,
-      //      quantity: data.quantity,
-      //      imageURL: image,
-      //   };
       fetch('https://secret-shelf-74335.herokuapp.com/addAAdmin', {
          method: 'POST',
          headers: {
@@ -45,6 +38,7 @@ const AddAdmin = () => {
                         </td>
                         <td>
                            <input
+                              className="px-5"
                               type="text"
                               name="name"
                               {...register('name')}
@@ -57,6 +51,7 @@ const AddAdmin = () => {
                         </td>
                         <td>
                            <input
+                              className="px-5"
                               type="email"
                               name="email"
                               {...register('email', { required: true })}
@@ -66,27 +61,6 @@ const AddAdmin = () => {
                      </tr>
                      <tr>
                         <td>
-                           <label htmlFor="Image">Image:</label>
-                        </td>
-                        {/* <td>
-                           <input
-                              type="file"
-                              name="image"
-                              onChange={imageUpload}
-                              placeholder=""
-                           />
-                        </td> */}
-                     </tr>{' '}
-                     <tr>
-                        <td>
-                           {/* {image && (
-                              <button
-                                 className="btn btn-success mt-2"
-                                 type="submit"
-                              >
-                                 Save to Database
-                              </button>
-                           )} */}
                            <button
                               //   onClick={refreshPage}
                               className="btn btn-success mt-2"
