@@ -33,6 +33,7 @@ const useOptions = () => {
 };
 
 const PaymentCard = ({ service }) => {
+   const { title, summary, details, price } = service;
    const history = useHistory();
    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
    const email = loggedInUser && loggedInUser.email;
@@ -53,9 +54,17 @@ const PaymentCard = ({ service }) => {
          type: 'card',
          card: elements.getElement(CardNumberElement),
       });
-      const clientOrder = { ...service, email, status: 'pending', ...payload };
+      const clientOrder = {
+         title,
+         summary,
+         details,
+         price,
+         email,
+         status: 'pending',
+         ...payload,
+      };
 
-      fetch('https://secret-shelf-74335.herokuapp.com/orderService', {
+      fetch('https://desolate-river-56965.herokuapp.com/orderService', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',

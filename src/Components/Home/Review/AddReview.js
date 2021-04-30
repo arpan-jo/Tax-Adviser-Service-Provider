@@ -14,7 +14,7 @@ const AddReview = () => {
    const onSubmit = e => {
       const data = { ...e, imageURL: image };
 
-      fetch('https://secret-shelf-74335.herokuapp.com/addReviews', {
+      fetch('https://desolate-river-56965.herokuapp.com/addReviews', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',

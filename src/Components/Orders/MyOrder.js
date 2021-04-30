@@ -10,7 +10,7 @@ const MyOrder = () => {
    const checkMail = loggedInUser && loggedInUser?.email;
 
    useEffect(() => {
-      fetch('https://secret-shelf-74335.herokuapp.com/myOrders', {
+      fetch('https://desolate-river-56965.herokuapp.com/myOrders', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',

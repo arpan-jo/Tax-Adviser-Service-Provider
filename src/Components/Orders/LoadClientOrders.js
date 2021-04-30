@@ -4,7 +4,7 @@ import { Dropdown } from 'react-bootstrap';
 const LoadClientOrders = ({ order }) => {
    const handleStatus = (id, e) => {
       const newStatus = e.target.innerText;
-      fetch('https://secret-shelf-74335.herokuapp.com/updateOrder', {
+      fetch('https://desolate-river-56965.herokuapp.com/updateOrder', {
          method: 'PATCH',
          headers: { 'Content-type': 'application/json' },
          body: JSON.stringify({ id, newStatus }),

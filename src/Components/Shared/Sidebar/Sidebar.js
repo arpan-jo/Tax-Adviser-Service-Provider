@@ -20,7 +20,7 @@ const Sidebar = () => {
 
    const checkMail = loggedInUser && loggedInUser?.email;
    useEffect(() => {
-      fetch('https://secret-shelf-74335.herokuapp.com/checkMail', {
+      fetch('https://desolate-river-56965.herokuapp.com/checkMail', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',

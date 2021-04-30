@@ -9,7 +9,7 @@ const Review = () => {
    const [loadReview, setLoadReview] = useState([]);
 
    useEffect(() => {
-      fetch('https://secret-shelf-74335.herokuapp.com/loadReviews')
+      fetch('https://desolate-river-56965.herokuapp.com/loadReviews')
          .then(res => res.json())
          .then(data => setLoadReview(data));
    }, []);

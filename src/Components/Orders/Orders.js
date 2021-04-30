@@ -8,7 +8,7 @@ const Orders = () => {
    const [clientOrder, setClientOrder] = useState([]);
 
    useEffect(() => {
-      fetch('https://secret-shelf-74335.herokuapp.com/clientOrders')
+      fetch('https://desolate-river-56965.herokuapp.com/clientOrders')
          .then(res => res.json())
          .then(data => {
             setClientOrder(data);
