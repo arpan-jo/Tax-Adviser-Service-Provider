@@ -37,7 +37,7 @@ const Sidebar = () => {
          className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4"
          style={{ height: '100vh' }}
       >
-         {adminMember ? (
+         {loggedInUser ? (
             <ul className="list-unstyled">
                <li>
                   <Link

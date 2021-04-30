@@ -10,7 +10,7 @@ const AddService = () => {
    } = useForm();
 
    const onSubmit = data => {
-      fetch('https://secret-shelf-74335.herokuapp.com/addServices', {
+      fetch('https://desolate-river-56965.herokuapp.com/addServices', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',

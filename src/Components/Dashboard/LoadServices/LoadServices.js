@@ -4,7 +4,7 @@ import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 const LoadServices = ({ service }) => {
    const deleteAdmin = id => {
-      fetch('https://secret-shelf-74335.herokuapp.com/deleteService', {
+      fetch('https://desolate-river-56965.herokuapp.com/deleteService', {
          method: 'DELETE',
          headers: {
             'Content-Type': 'application/json',

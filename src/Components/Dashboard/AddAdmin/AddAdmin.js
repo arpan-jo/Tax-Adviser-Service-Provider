@@ -12,7 +12,7 @@ const AddAdmin = () => {
    } = useForm();
 
    const onSubmit = data => {
-      fetch('https://secret-shelf-74335.herokuapp.com/addAAdmin', {
+      fetch('https://desolate-river-56965.herokuapp.com/addAAdmin', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json',

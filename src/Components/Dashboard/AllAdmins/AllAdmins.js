@@ -7,7 +7,7 @@ const AllAdmins = () => {
    const [allAdmin, setAllAdmin] = useState([]);
 
    useEffect(() => {
-      fetch('https://secret-shelf-74335.herokuapp.com/allAdmins')
+      fetch('https://desolate-river-56965.herokuapp.com/allAdmins')
          .then(res => res.json())
          .then(data => setAllAdmin(data));
    }, []);

@@ -14,7 +14,7 @@ const LoadAllAdmin = ({ admin }) => {
    };
 
    useEffect(() => {
-      fetch('https://secret-shelf-74335.herokuapp.com/deleteAdmin', {
+      fetch('https://desolate-river-56965.herokuapp.com/deleteAdmin', {
          method: 'DELETE',
          headers: {
             'Content-Type': 'application/json',
